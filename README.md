@@ -41,3 +41,11 @@ This guide will walk you through deploying WordPress on an AWS EC2 instance usin
    ```bash
    sudo apt install docker-compose -y
    ```
+
+## Preparing for Deployment with Docker-Compose
+
+1. **Set Up Directory Structure** 
+    ```bash
+    mkdir ~/wordpress-deployment
+    cd ~/wordpress-deployment
+    ```
