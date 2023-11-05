@@ -1,0 +1,6 @@
+FROM wordpress:latest
+
+# Add custom themes or plugins
+# ADD my-theme /var/www/html/wp-content/themes/my-theme
+
+# Any other customization can be added here

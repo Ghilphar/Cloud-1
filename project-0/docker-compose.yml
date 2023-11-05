@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  # WordPress Service
+  wordpress:
+    build:
+      context: .
+      dockerfile: Dockerfile-wordpress
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    depends_on:
+      - db
+    volumes:
+      - wordpress_data:/var/www/html
+
+  # MySQL Service
+  db:
+    build:
+      context: .
+      dockerfile: Dockerfile-mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  wordpress_data:
+  db_data:
