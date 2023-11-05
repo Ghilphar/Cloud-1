@@ -49,3 +49,30 @@ This guide will walk you through deploying WordPress on an AWS EC2 instance usin
     mkdir ~/wordpress-deployment
     cd ~/wordpress-deployment
     ```
+
+2. **Create docker-compose.yml File** 
+
+    ```bash
+    vim docker-compose.yml
+    ```
+
+3. **Start the Services** 
+
+    ```
+    docker-compose up -
+    ```
+
+## Automating Deployment with Ansible
+
+1. **Install Ansible on Your Local Machine** 
+    Follow the [official  documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
+2. **Set Up Ansible Inventory and Playbook** 
+    - Create hosts.ini for inventory.
+    - Create deploy.yml for playbook.
+
+3. **Run Ansible Playbook** 
+
+    ```
+    ansible-playbook -i hosts.ini deploy.yml
+    ```
