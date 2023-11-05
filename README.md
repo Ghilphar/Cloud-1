@@ -34,8 +34,10 @@ This guide will walk you through deploying WordPress on an AWS EC2 instance usin
    sudo apt update
    sudo apt install docker.io -y
    sudo systemctl start docker
-   sudo systemctl enable docker```
+   sudo systemctl enable docker
+   ```
 
 2. **Install Docker Compose**
-
-
+   ```bash
+   sudo apt install docker-compose -y
+   ```
